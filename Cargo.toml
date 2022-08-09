@@ -1,0 +1,31 @@
+[package]
+name = "chirpstack-udp-forwarder"
+repository="https://github.com/chirpstack/chirpstack-udp-forwarder/"
+license="MIT"
+version = "4.0.0-test.2"
+authors = ["Orne Brocaar <info@brocaar.com>"]
+edition = "2018"
+publish = false
+
+[dependencies]
+chirpstack_api = { version = "4.0.0-test.18", default-features = false }
+serde_json = "1.0"
+zmq = "0.9"
+clap = "3.2"
+hex = "0.4"
+toml = "0.5"
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+simple_logger = "2.2"
+uuid = { version = "1.1", features = ["v4"] }
+syslog = "6.0"
+rand = "0.8"
+chrono = "0.4"
+base64 = "0.13"
+prost = "0.10"
+pbjson-types = "0.3"
+prometheus = "0.13"
+lazy_static = "1.4"
+
+[features]
+default = ['zmq/vendored']
